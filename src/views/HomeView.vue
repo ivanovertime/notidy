@@ -1,9 +1,9 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import TheNotification from '../components/TheNotification.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <TheNotification />
   </main>
 </template>
