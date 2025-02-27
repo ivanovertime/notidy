@@ -62,11 +62,11 @@ const {
 
 <style scoped>
 .button {
-  background-color: #38a169;
+  background-color: #1ba13f;
 
   /* bg-green-500 */
   &:hover {
-    background-color: #2f855a;
+    background-color: #1f8139;
     /* hover:bg-green-700 */
   }
 
