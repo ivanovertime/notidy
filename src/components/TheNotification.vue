@@ -21,6 +21,20 @@
 // should always check the isSupported property before calling the show function.
 
 import { useWebNotification } from '@vueuse/core'
+import { useEventSource } from '@vueuse/core'
+import { ref } from 'vue'
+// const { status, data, error, close } = useEventSource('http://localhost:3000', {
+//   withCredentials: true,
+//   mode: 'cors',
+// })
+
+const { status, data, error, close } = useEventSource('http://localhost:3000/sse')
+
+
+
+
+const eventData = ref(data)
+
 
 const options = {
   title: 'Hello, world from VueUse!',
@@ -51,6 +65,7 @@ const {
     <button class="button" @click="showNotification()">
       Show Notification
     </button>
+    <pre style="white-space: pre-wrap">{{ eventData }}</pre>
 
   </div>
 
